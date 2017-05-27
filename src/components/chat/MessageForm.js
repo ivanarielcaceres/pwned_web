@@ -4,27 +4,32 @@ class MessageForm extends Component{
     constructor(props){
         super(props);
         this.state ={
-            menssage: ''
+            message: ''
         }
+        this.handleMessage = this.handleMessage.bind(this);
         this.sendMessage = this.sendMessage.bind(this);
+        
+    }
+    handleMessage(e){
+       // e.preventDefault();
+        this.setState({message: e.target.value});
+        console.log(this.state.message);
     }
     sendMessage(e){
-       // e.preventDefault();
-        this.setState({
-            menssage: e.target.value
-        })
-        console.log(this.state.menssage);
+        e.preventDefault();
+        //Hacemos el push al firebase
+        console.log(`Hacemos el push al firebase ${this.state.message}`);
     }
     render(){
         return(
-         <form>
+         <form onSubmit={this.sendMessage}>
             <FormGroup controlId="formBasicText">
                 <FormControl
                     ref="message"
                     type="text"
-                    value={this.state.menssage}
+                    value={this.state.message}
                     placeholder="new message..."
-                    onChange={this.sendMessage}
+                    onChange={this.handleMessage}
                 />
             </FormGroup>
       </form>

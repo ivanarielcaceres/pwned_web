@@ -8,12 +8,12 @@ class Chat extends Component{
         return(
             <Grid>
                 <Row>
-                    <Col md={12}>
+                    <Col md={10}>
                         <Conversation/>
                     </Col>
                   </Row>
                 <Row>
-                    <Col md={12}>
+                    <Col md={10}>
                         <MessageForm/>
                     </Col>
                 </Row>
