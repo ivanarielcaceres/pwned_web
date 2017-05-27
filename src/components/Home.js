@@ -23,16 +23,16 @@ class Home extends Component{
                         <Navbar>
                             <Navbar.Header>
                             <Navbar.Brand>
-                                <a href="#">Smart Chat Alpha</a>
+                                <a>Smart Chat Alpha</a>
                             </Navbar.Brand>
                             <Navbar.Toggle />
                             </Navbar.Header>
                             <Navbar.Collapse>
                             <Navbar.Text>
-                                Signed in as: <Navbar.Link href="#">Mark Otto</Navbar.Link>
+                                Signed in as: <Navbar.Link>Mark Otto</Navbar.Link>
                             </Navbar.Text>
                             <Navbar.Text pullRight>
-                                <Navbar.Link href="#">Salir</Navbar.Link>
+                                <Navbar.Link>Salir</Navbar.Link>
                             </Navbar.Text>
                             </Navbar.Collapse>
                         </Navbar>
@@ -46,30 +46,27 @@ class Home extends Component{
                                 <h4>Asignados</h4>
                                 <Nav bsStyle="pills" stacked>
                                     <IndexLinkContainer to="/">
-                                        <NavItem eventKey={1} href="#">All</NavItem>
+                                        <NavItem eventKey={1}>All</NavItem>
                                     </IndexLinkContainer>
                                     <LinkContainer to="/chat/1234">
-                                        <NavItem eventKey={2} href="#">Error 404 nodejs</NavItem>
+                                        <NavItem eventKey={2}>Error 404 nodejs</NavItem>
                                     </LinkContainer>
                                     <LinkContainer to="/chat/12323423">
-                                        <NavItem eventKey={3} href="#">Error apache2</NavItem>
+                                        <NavItem eventKey={3}>Error apache2</NavItem>
                                     </LinkContainer>
                                     <LinkContainer to="/chat/1232342323">
-                                        <NavItem eventKey={4} href="#">react native error</NavItem>
+                                        <NavItem eventKey={4}>react native error</NavItem>
                                     </LinkContainer>
                                     <LinkContainer to="/chat/12312323234">
-                                        <NavItem eventKey={5} href="#">js de mierda</NavItem>
+                                        <NavItem eventKey={5}>js de mierda</NavItem>
                                     </LinkContainer>
-                                     <h4>Cerrados</h4>
                                      <LinkContainer to="/chat/1231232asds3234">
-                                        <NavItem eventKey={6} href="#">jquery</NavItem>
+                                        <NavItem eventKey={6}>jquery</NavItem>
                                     </LinkContainer>
                                     <LinkContainer to="/chat/123123eeee4">
-                                        <NavItem eventKey={6} href="#">React install</NavItem>
+                                        <NavItem eventKey={6}>React install</NavItem>
                                     </LinkContainer>
                                 </Nav>
-                               
-                               
                             </Col>
                             <Col sm={10}>
                                 <Route exact path="/" component={PostList}/>

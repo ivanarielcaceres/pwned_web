@@ -10,6 +10,7 @@ class Post extends Component{
         return(
            <div>
                <p>{this.props.title}</p>
+               <p>{this.props.id}</p>
                <Image style={img} src={this.props.imgUrl} />
            </div>
         )
