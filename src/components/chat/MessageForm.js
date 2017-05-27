@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {FormGroup, FormControl} from 'react-bootstrap';
+import firebase,{firebaseDatabaseRef } from '../../firebase/conexion.js';
 class MessageForm extends Component{
     constructor(props){
         super(props);
@@ -19,6 +20,12 @@ class MessageForm extends Component{
         e.preventDefault();
         //Hacemos el push al firebase
         console.log(`Hacemos el push al firebase ${this.state.message}`);
+        //Creamos el objeto json
+        let message ={
+            message: this.state.message,
+            auto: 'msvzero'
+        }
+        let messageRef = firebaseDatabaseRef.child(`mensajes`).push(message)
     }
     render(){
         return(
